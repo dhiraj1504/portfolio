@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OpenNewTab } from './shared/OpenUrlInNewTab';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  openTab : OpenNewTab;
+
+  constructor() {
+    this.openTab = new OpenNewTab();
+  }
+
+  openFunc(url : string | undefined){
+    this.openTab.openTab(url);
+  }
 }

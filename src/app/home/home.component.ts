@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenNewTab } from '../shared/OpenUrlInNewTab';
 
 @Component({
   selector: 'app-home',
@@ -36,6 +37,12 @@ export class HomeComponent implements OnInit {
       }
     }, 150)
   }
+
+  openFunc(url : string | undefined){
+    let opentab = new OpenNewTab();
+    opentab.openTab(url);
+  }
+
   ngOnInit(): void {
     this.typeef();
   }
