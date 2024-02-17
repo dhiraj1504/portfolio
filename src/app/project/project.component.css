@@ -1,0 +1,7 @@
+.swan{
+    transition: all 0.2s ease-in-out;
+}
+
+.swan:hover{
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.52);
+}
